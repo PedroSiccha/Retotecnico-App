@@ -2,6 +2,9 @@ package com.inforad.retotecnicoapp.domain.model
 
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+import java.net.URLEncoder
+import java.nio.charset.StandardCharsets
 
 data class User(
     @SerializedName("id")
@@ -24,9 +27,19 @@ data class User(
 
     @SerializedName("password")
     val password: String? = null
-) {
-    fun toJSon(): String = Gson().toJson(this)
-
+): Serializable {
+//    fun toJSon(): String = Gson().toJson(this)
+    fun toJson(): String = Gson().toJson(
+        User(
+            id,
+            email,
+            first_name,
+            last_name,
+            if (!avatar.isNullOrBlank()) URLEncoder.encode(avatar, StandardCharsets.UTF_8.toString()) else "",
+            token,
+            password
+        )
+    )
     companion object {
         fun fromJson(data: String): User = Gson().fromJson(data, User::class.java)
     }

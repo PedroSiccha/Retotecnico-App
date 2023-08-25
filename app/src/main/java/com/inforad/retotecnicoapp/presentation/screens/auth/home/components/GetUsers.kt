@@ -11,11 +11,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import com.inforad.retotecnicoapp.domain.util.Response
 import com.inforad.retotecnicoapp.presentation.screens.auth.home.HomeViewModel
 
 @Composable
-fun GetUsers(paddingValues: PaddingValues, vm: HomeViewModel = hiltViewModel()) {
+fun GetUsers(navController: NavHostController, paddingValues: PaddingValues, vm: HomeViewModel = hiltViewModel()) {
     when(val response = vm.userResponse) {
         Response.Loading -> {
             Box(
@@ -26,8 +27,7 @@ fun GetUsers(paddingValues: PaddingValues, vm: HomeViewModel = hiltViewModel()) 
             }
         }
         is Response.Success -> {
-            Log.e("GETUSER", "DATA: ${response.data}")
-            UserListContent(paddingValues = paddingValues, user = response.data.data)
+            UserListContent(paddingValues = paddingValues, user = response.data.data, navController)
         }
         is Response.Failure -> {
             Toast.makeText(LocalContext.current, response.exception.message, Toast.LENGTH_SHORT).show()
