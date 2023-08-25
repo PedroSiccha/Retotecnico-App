@@ -37,13 +37,13 @@ fun SecundaryButton(
         Row(horizontalArrangement = Arrangement.Start, verticalAlignment = Alignment.CenterVertically) {
             Image(
                 modifier = Modifier
-                    .size(32.dp) // Ajusta el tamaño de la imagen según tus necesidades
-                    .padding(4.dp), // Añade un pequeño espacio alrededor de la imagen
+                    .size(32.dp)
+                    .padding(4.dp),
                 painter = painterResource(id = imagen),
-                contentDescription = "Imagen de Boton",
+                contentDescription = "",
                 alignment = Alignment.CenterStart,
             )
-            Spacer(modifier = Modifier.width(8.dp)) // Espacio entre la imagen y el texto
+            Spacer(modifier = Modifier.width(8.dp))
             Text(
                 text = text
             )

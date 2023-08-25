@@ -2,10 +2,8 @@ package com.inforad.retotecnicoapp.presentation.screens.auth.login
 
 import android.content.Context
 import android.preference.PreferenceManager
-import android.util.Log
 import android.util.Patterns
 import androidx.compose.runtime.*
-import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.inforad.retotecnicoapp.domain.model.User
@@ -37,7 +35,6 @@ class LoginViewModel @Inject constructor(private val authUseCase: AuthUseCase): 
         loginResponse = Response.Loading
         val result = authUseCase.login(readMyString(context), state.password)
         loginResponse = result
-        Log.e("LVM", "Response: ${loginResponse}")
     }
 
     fun onEmailInput(email: String, context: Context) {

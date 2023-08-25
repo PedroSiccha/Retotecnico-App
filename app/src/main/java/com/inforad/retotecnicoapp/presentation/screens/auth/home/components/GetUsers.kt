@@ -1,6 +1,5 @@
 package com.inforad.retotecnicoapp.presentation.screens.auth.home.components
 
-import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues

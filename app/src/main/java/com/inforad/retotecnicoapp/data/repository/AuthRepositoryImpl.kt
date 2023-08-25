@@ -5,8 +5,6 @@ import com.inforad.retotecnicoapp.domain.model.User
 import com.inforad.retotecnicoapp.domain.model.UsersResponse
 import com.inforad.retotecnicoapp.domain.repository.AuthRepository
 import com.inforad.retotecnicoapp.domain.util.Response
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 

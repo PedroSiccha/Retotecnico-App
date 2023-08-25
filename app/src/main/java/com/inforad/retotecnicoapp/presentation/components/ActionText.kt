@@ -7,7 +7,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavHostController
-import com.inforad.retotecnicoapp.presentation.navigation.screen.AuthScreen
 import com.inforad.retotecnicoapp.presentation.theme.ColorTextAction
 
 @Composable
