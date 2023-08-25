@@ -11,6 +11,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -34,7 +35,7 @@ fun RegisterContent(navController: NavHostController, paddingValues: PaddingValu
         Image(
             modifier = Modifier.fillMaxSize(),
             painter = painterResource(id = R.drawable.fondoreto),
-            contentDescription = "Imagen de fondo",
+            contentDescription = "",
             contentScale = ContentScale.Crop
         )
         Column(
@@ -48,7 +49,7 @@ fun RegisterContent(navController: NavHostController, paddingValues: PaddingValu
                     .align(Alignment.Start)
                     .padding(start = 10.dp),
                 text =
-                "Sign up",
+                stringResource(R.string.sign_up),
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.weight(1f))
@@ -94,7 +95,7 @@ fun RegisterContent(navController: NavHostController, paddingValues: PaddingValu
                             onValueChange = {text ->
                                 vm.onNameInput(text)
                             },
-                            placeholder = "Name",
+                            placeholder = stringResource(R.string.name),
                             keyboardType = KeyboardType.Text
                         )
                         Spacer(modifier = Modifier.height(8.dp))
@@ -104,7 +105,7 @@ fun RegisterContent(navController: NavHostController, paddingValues: PaddingValu
                             onValueChange = { text ->
                                 vm.onPasswordInput(text)
                             },
-                            placeholder = "Password",
+                            placeholder = stringResource(R.string.password),
                             keyboardType = KeyboardType.Password,
                             hideText = true
                         )
@@ -113,8 +114,8 @@ fun RegisterContent(navController: NavHostController, paddingValues: PaddingValu
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(bottom = 3.dp),
-                            text = "By selecting Agree and continue below, I agree to Terms of Service and Privacy Policy",
-                            textCustom = "Terms of Service and Privacy Policy",
+                            text = stringResource(R.string.by_selecting_agree_and_continue_below_i_agree_to_terms_of_service_and_privacy_policy),
+                            textCustom = stringResource(R.string.terms_of_service_and_privacy_policy),
                             fontWeight = FontWeight.Normal,
                             textAlign = TextAlign.Start,
                             color = ColorText,
@@ -130,7 +131,7 @@ fun RegisterContent(navController: NavHostController, paddingValues: PaddingValu
                             onClick = {
                                       vm.register(context)
                             },
-                            text = "Agree and continue"
+                            text = stringResource(R.string.agree_and_continue)
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                     }

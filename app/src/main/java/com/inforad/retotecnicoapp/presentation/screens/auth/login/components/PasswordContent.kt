@@ -1,22 +1,19 @@
 package com.inforad.retotecnicoapp.presentation.screens.auth.login.components
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
@@ -24,9 +21,7 @@ import com.inforad.retotecnicoapp.R
 import com.inforad.retotecnicoapp.presentation.components.*
 import com.inforad.retotecnicoapp.presentation.navigation.screen.AuthScreen
 import com.inforad.retotecnicoapp.presentation.screens.auth.login.LoginViewModel
-import com.inforad.retotecnicoapp.presentation.theme.ColorButtonSecundary
 import com.inforad.retotecnicoapp.presentation.theme.ColorCard
-import com.inforad.retotecnicoapp.presentation.theme.ColorText
 
 @Composable
 fun PasswordContent(navController: NavHostController, paddingValues: PaddingValues, vm: LoginViewModel = hiltViewModel()) {
@@ -40,7 +35,7 @@ fun PasswordContent(navController: NavHostController, paddingValues: PaddingValu
         Image(
             modifier = Modifier.fillMaxSize(),
             painter = painterResource(id = R.drawable.fondoreto),
-            contentDescription = "Imagen de fondo",
+            contentDescription = "",
             contentScale = ContentScale.Crop
         )
         Column(
@@ -54,7 +49,7 @@ fun PasswordContent(navController: NavHostController, paddingValues: PaddingValu
                     .align(Alignment.Start)
                     .padding(start = 10.dp),
                 text =
-                "Log in",
+                stringResource(R.string.log_in),
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.weight(1f))
@@ -80,7 +75,7 @@ fun PasswordContent(navController: NavHostController, paddingValues: PaddingValu
                         UserView(
                             modifier = Modifier.fillMaxWidth().padding(8.dp),
                             imgUser = R.drawable.usuario,
-                            nameUser = "Jane Dow",
+                            nameUser = stringResource(R.string.jane_dow),
                             email = vm.readMyString(context)
                         )
                         Spacer(modifier = Modifier.height(16.dp))
@@ -90,7 +85,7 @@ fun PasswordContent(navController: NavHostController, paddingValues: PaddingValu
                             onValueChange = { text ->
                                 vm.onPasswordInput(text)
                             },
-                            placeholder = "Password",
+                            placeholder = stringResource(R.string.password),
                             keyboardType = KeyboardType.Password,
                             hideText = true
                         )
@@ -103,12 +98,12 @@ fun PasswordContent(navController: NavHostController, paddingValues: PaddingValu
                             onClick = {
                                       vm.login(context)
                             },
-                            text = "Continue"
+                            text = stringResource(R.string.continuar)
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         ActionText(
                             modifier = Modifier.padding(bottom = 16.dp),
-                            text = "Forgot your password?",
+                            text = stringResource(R.string.forgot_your_password),
                             fontWeight = FontWeight.Bold,
                             navController = navController,
                             route = AuthScreen.Register.route

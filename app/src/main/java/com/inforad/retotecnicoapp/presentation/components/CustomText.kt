@@ -9,7 +9,6 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import com.inforad.retotecnicoapp.presentation.theme.ColorText
-import com.inforad.retotecnicoapp.presentation.theme.ColorTextAction
 
 @Composable
 fun CustomText(

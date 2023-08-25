@@ -10,7 +10,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.inforad.retotecnicoapp.R
 import com.inforad.retotecnicoapp.presentation.components.SimpleText
 
 @Composable
@@ -26,7 +25,7 @@ fun UserView(modifier: Modifier, imgUser: Int, nameUser: String, email: String) 
                 .clip(CircleShape)
                 .padding(top = 8.dp),
             painter = painterResource(id = imgUser),
-            contentDescription = "Img User"
+            contentDescription = ""
         )
         Column(
             modifier = Modifier.padding(5.dp)

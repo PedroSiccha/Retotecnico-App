@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Retotecnico App</string>
+    <string name="lista_de_usuarios">Lista de Usuarios</string>
+    <string name="error_desconocido">Error desconocido</string>
+    <string name="hubo_un_error_desconocido">Hubo un error desconocido</string>
+    <string name="email">Email</string>
+    <string name="continuar">Continue</string>
+    <string name="or">or</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_apple">Continue with Apple</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="log_in">Log in</string>
+    <string name="jane_dow">Jane Dow</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="by_selecting_agree_and_continue_below_i_agree_to_terms_of_service_and_privacy_policy">By selecting Agree and continue below, I agree to Terms of Service and Privacy Policy</string>
+    <string name="terms_of_service_and_privacy_policy">Terms of Service and Privacy Policy</string>
+    <string name="agree_and_continue">Agree and continue</string>
 </resources>

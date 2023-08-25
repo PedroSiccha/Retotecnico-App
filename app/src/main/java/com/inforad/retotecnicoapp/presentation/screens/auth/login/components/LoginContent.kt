@@ -12,6 +12,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -41,7 +42,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
         Image(
             modifier = Modifier.fillMaxSize(),
             painter = painterResource(id = R.drawable.fondoreto),
-            contentDescription = "Imagen de fondo",
+            contentDescription = "",
             contentScale = ContentScale.Crop
         )
         Column(
@@ -85,7 +86,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                             onValueChange = {text ->
                                 vm.onEmailInput(text, context)
                             },
-                            placeholder = "Email",
+                            placeholder = stringResource(R.string.email),
                             keyboardType = KeyboardType.Email
                         )
                         Spacer(modifier = Modifier.height(8.dp))
@@ -98,14 +99,14 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                                 vm.validateForm()
                                 navController.navigate(route = AuthScreen.Password.route)
                             },
-                            text = "Continue"
+                            text = stringResource(R.string.continuar)
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         SimpleText(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(bottom = 3.dp),
-                            text = "or",
+                            text = stringResource(R.string.or),
                             fontWeight = FontWeight.Normal,
                             textAlign = TextAlign.Center,
                             color = ColorText
@@ -119,7 +120,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                             onClick = {
 
                             },
-                            text = "Continue with Facebook",
+                            text = stringResource(R.string.continue_with_facebook),
                             color = ColorButtonSecundary,
                             imagen = R.drawable.facebook
                         )
@@ -130,7 +131,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                                 .height(48.dp)
                                 .padding(bottom = 3.dp),
                             onClick = {},
-                            text = "Continue with Google",
+                            text = stringResource(R.string.continue_with_google),
                             color = ColorButtonSecundary,
                             imagen = R.drawable.google
                         )
@@ -141,20 +142,20 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                                 .height(48.dp)
                                 .padding(bottom = 3.dp),
                             onClick = {},
-                            text = "Continue with Apple",
+                            text = stringResource(R.string.continue_with_apple),
                             color = ColorButtonSecundary,
                             imagen = R.drawable.apple
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         SignUpText(
                             navController = navController,
-                            donthavText = "Don't have an account?",
-                            signUpText = "Sign up"
+                            donthavText = stringResource(R.string.don_t_have_an_account),
+                            signUpText = stringResource(R.string.sign_up)
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         ActionText(
                             modifier = Modifier.padding(bottom = 16.dp),
-                            text = "Forgot your password?",
+                            text = stringResource(R.string.forgot_your_password),
                             fontWeight = FontWeight.Bold,
                             navController = navController,
                             route = AuthScreen.Register.route
