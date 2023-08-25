@@ -28,7 +28,6 @@ data class User(
     @SerializedName("password")
     val password: String? = null
 ): Serializable {
-//    fun toJSon(): String = Gson().toJson(this)
     fun toJson(): String = Gson().toJson(
         User(
             id,
