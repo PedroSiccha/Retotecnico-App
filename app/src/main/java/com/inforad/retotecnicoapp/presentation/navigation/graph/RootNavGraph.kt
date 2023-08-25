@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import com.inforad.retotecnicoapp.presentation.navigation.Graph
+import com.inforad.retotecnicoapp.presentation.navigation.graph.profile.ProfileNavGraph
 
 @Composable
 fun RootNavGraph(navController: NavHostController) {
@@ -15,5 +16,7 @@ fun RootNavGraph(navController: NavHostController) {
         AuhtNavGraph(
             navController = navController
         )
+
+        ProfileNavGraph(navController)
     }
 }
