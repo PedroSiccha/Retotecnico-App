@@ -120,7 +120,8 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
 
                             },
                             text = "Continue with Facebook",
-                            color = ColorButtonSecundary
+                            color = ColorButtonSecundary,
+                            imagen = R.drawable.facebook
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         SecundaryButton(
@@ -130,7 +131,8 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                                 .padding(bottom = 3.dp),
                             onClick = {},
                             text = "Continue with Google",
-                            color = ColorButtonSecundary
+                            color = ColorButtonSecundary,
+                            imagen = R.drawable.google
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         SecundaryButton(
@@ -140,7 +142,8 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                                 .padding(bottom = 3.dp),
                             onClick = {},
                             text = "Continue with Apple",
-                            color = ColorButtonSecundary
+                            color = ColorButtonSecundary,
+                            imagen = R.drawable.apple
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         SignUpText(
